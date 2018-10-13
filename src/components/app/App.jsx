@@ -5,7 +5,6 @@ import Todos from "../todos/Todos";
 
 const App = () => (
   <div className={ styles.app }>
-    <Todos/>
   </div>
 );
 

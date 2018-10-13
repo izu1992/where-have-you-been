@@ -1,12 +1,12 @@
 import firebase from "firebase";
 
 firebase.initializeApp({
-    apiKey: "AIzaSyAb_6AJP5qdgLtLlYjkhAjZ7PV5ClfOuqE",
-    authDomain: "clwroproject.firebaseapp.com",
-    databaseURL: "https://clwroproject.firebaseio.com",
-    projectId: "clwroproject",
-    storageBucket: "clwroproject.appspot.com",
-    messagingSenderId: "1028990301891"
+    // apiKey: "AIzaSyAb_6AJP5qdgLtLlYjkhAjZ7PV5ClfOuqE",
+    // authDomain: "clwroproject.firebaseapp.com",
+    // databaseURL: "https://clwroproject.firebaseio.com",
+    // projectId: "clwroproject",
+    // storageBucket: "clwroproject.appspot.com",
+    // messagingSenderId: "1028990301891"
   });
 
 export const get = (url) => {
