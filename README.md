@@ -1,1 +1,1 @@
-adres: https://tiriana.github.io/WRO_FER_W_06_projekt/
+adres: https://izu1992.github.io/project/
