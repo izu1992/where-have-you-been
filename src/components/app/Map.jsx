@@ -22,6 +22,7 @@ class BasicMap extends Component {
             .then( response => {
             return response.json()
         }).then(data => {
+            console.log(data);
             this.setState({
                 country: data,
                 info: true
@@ -45,7 +46,7 @@ class BasicMap extends Component {
         })
     };
 
-    //Dodawanie odwiedzonego kraju do tablicy
+    //Dodawanie odwiedzonego kraju do listy
     addCountryToList = (countryToAdd) => {
 
         this.setState((prevState) => {
@@ -55,12 +56,11 @@ class BasicMap extends Component {
             return {
                 visited: true,
                 visitedCountries
-                //counter: this.state.counter + 1,
             }
         });
     };
 
-    //Usuwanie nieodwiedzonego kraju z tablicy
+    //Usuwanie nieodwiedzonego kraju z listy
     removeCountryFromList = (countryToRemove) => {
         this.setState((prevState) => {
 
@@ -72,37 +72,48 @@ class BasicMap extends Component {
             return {
                 info: false,
                 visitedCountries: newVisiedCountries,
-                //counter: this.state.counter - 1
             }
         });
     };
-
 
     render() {
         let countryInfo = "";
         let countryList = [];
         let count = Object.keys(this.state.visitedCountries).length;
 
-        //Sprawdzam czy kliknięto na kraj
+        //Jeżeli kliknięto na kraj to renderuję info na jego temat
         if (this.state.info === true) {
-            //Tworzę info na temat klikniętego kraju
             countryInfo = <div className={ styles.countryInfo }>
-                <a href="#" className={styles.close} onClick={this.closeCountryInfo}/>
-                <h2>{ this.state.country.name } </h2>
+                <div className={ styles.title }>{ this.state.country.name } </div>
+                <a href="#" className={ styles.close } onClick={this.closeCountryInfo}/>
+                <div className={ styles.info }>
                 <div>Native name: { this.state.country.nativeName } </div>
                 <div>Capital city: { this.state.country.capital } </div>
                 <div>Region: { this.state.country.subregion } </div>
-                <h5 className='been'>Have you been in this country? <button className='btn' onClick={
+                <div>Language:
+                    { this.state.country.languages.map((lang) => {
+                            return <span key={lang.name}> {lang.name}   </span>
+                        })
+                    }
+                </div>
+                <div>Currency:
+                    { this.state.country.currencies.map((el) => {
+                            return <span key={el.code}> {el.name} ( {el.code}, {el.symbol} ) </span>
+                        })
+                    }
+                </div>
+                </div>
+                <div className={ styles.been } > <span>Have you been in this country?</span> <button className={ styles.btn } onClick={
                     () => this.addCountryToList({ ...this.state.country })
-                } >Yes!</button> <button className='btn' onClick={
+                } >Yes!</button> <button className={ styles.btn } onClick={
                     () => this.removeCountryFromList({ ...this.state.country })
-                } >No!</button> </h5>
+                } >No!</button> </div>
             </div>;
         } else if (this.state.info === false) {
             countryInfo = "";
         }
 
-        //Lista odwiedzonych krajów
+        //Render listy odwiedzonych krajów
         if (this.state.visited === true) {
             console.log(this.state.visitedCountries);
             countryList = <div className={ styles.countryList }>
@@ -115,7 +126,8 @@ class BasicMap extends Component {
         }
 
         return (
-            <div className={styles.wrapperStyles}>
+            <div className={styles.mainMap}>
+                <div className={styles.wrapperStyles}>
                 <ComposableMap
                     projectionConfig={{
                         scale: 205,
@@ -143,9 +155,11 @@ class BasicMap extends Component {
                         </Geographies>
                     </ZoomableGroup>
                 </ComposableMap>
+
                 <ReactTooltip border={true}/>
                 <div> { countryInfo }</div>
                 <div> { countryList }</div>
+            </div>
             </div>
         )
     }
@@ -153,8 +167,4 @@ class BasicMap extends Component {
 
 export default BasicMap
 
-
-//Pierdu pierdu
-//console.log(Object.keys(this.state.visitedCountries).indexOf(geography.properties.ISO_A3)) ||
-
-
+//<img className='flag' src={this.state.country.flag} alt='flag'/>
