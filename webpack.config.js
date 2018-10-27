@@ -20,7 +20,7 @@ module.exports = {
             loader: "css-loader",
             options: {
               modules: true,
-              localIdentName: "[local]_[hash]"
+              localIdentName: "[local]_[hash]",
             }
           },
           {
@@ -37,7 +37,7 @@ module.exports = {
   resolve: {
     extensions: ["*", ".js", ".jsx"]
   },
-  entry: "./src/index.js",
+  entry: ['whatwg-fetch', "./src/index.js"],
   output: {
 		path: __dirname + "/docs",
 		filename: "bundle.js"
@@ -45,4 +45,4 @@ module.exports = {
   devServer: {
     contentBase: "./docs"
   }
-}
+};

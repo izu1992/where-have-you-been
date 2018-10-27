@@ -1,11 +1,11 @@
 import React from "react";
 import styles from "./App.scss";
-import imageSrc from "./peter.jpg";
-import Todos from "../todos/Todos";
+import BasicMap from "./Map.jsx";
 
 const App = () => (
-  <div className={ styles.app }>
-  </div>
+    <div className={ styles.main }>
+        <BasicMap/>
+    </div>
 );
 
 export default App;

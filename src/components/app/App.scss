@@ -1,5 +1,107 @@
-.app {
-  background-image: url(./peter.jpg);
-  width: 500px;
-  height: 200px;
+.main {
+  border: 2px solid red;
+  width: 1000px;
+  height: 600px;
+  box-sizing: border-box;
 }
+
+.wrapperStyles {
+  width: "100%";
+  max-width: 980;
+  margin: "0 auto";
+};
+
+.selectedMap {
+  fill: #ECEFF1;
+  stroke: #607D8B;
+  stroke-width: 0.75;
+  outline: none;
+}
+
+.selectedMap:hover {
+  fill: #607D8B;
+  stroke: #607D8B;
+  stroke-width: 0.75;
+  outline: none;
+}
+
+.selectedMap:active {
+  fill: #FF5722;
+  stroke: #607D8B;
+  stroke-width: 0.75;
+  outline: none;
+
+}
+
+.visitedCountry {
+  fill: #3f30ff;
+  stroke: #1a138b;
+  stroke-width: 0.75;
+  outline: none;
+
+}
+
+.countryList {
+  display: inline-block;
+  border: 2px solid red;
+  width: 300px;
+  height: 200px;
+  background-color: darkgrey;
+}
+
+.countryInfo {
+  display: inline-block;
+  border: 2px solid red;
+  width: 300px;
+  height: 200px;
+  background-color: #607D8B;
+  float: left;
+}
+
+
+.counter {
+  font-size: 20px;
+  padding: 10px;
+}
+
+
+/*krzyżyk zamykania*/
+.close {
+  size: 25px;
+  height: 25px;
+  width: 25px;
+  position: relative;
+  box-sizing: border-box;
+  line-height: 25px;
+  display: inline-block;
+
+  &:before, &:after {
+    width: 25px;
+    height: 5px;
+    transform: rotate(-45deg);
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: 25px/2;
+    margin-left: 5px/2;
+    margin-bottom: 25px/2;
+    display: block;
+    background-color: #000;
+    transition: all 0.2s ease-out;
+  }
+
+  &:after {
+    transform: rotate(45deg);
+  }
+
+  &:hover {
+
+    &:before, &:after {
+      transform: rotate(0deg);
+    }
+  }
+}
+
+
+
