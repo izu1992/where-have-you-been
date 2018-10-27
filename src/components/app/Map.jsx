@@ -32,19 +32,19 @@ class BasicMap extends Component {
         })
     };
 
-    //Zamykanie info
-    closeCountryInfo = () => {
-        this.setState({
-            info: false
-        })
-    };
-
-    //Zamykanie listy z odwiedzonymi krajami
-    closeCountryList = () => {
-        this.setState({
-            visited: false
-        })
-    };
+    // //Zamykanie info
+    // closeCountryInfo = () => {
+    //     this.setState({
+    //         info: false
+    //     })
+    // };
+    //
+    // //Zamykanie listy z odwiedzonymi krajami
+    // closeCountryList = () => {
+    //     this.setState({
+    //         visited: false
+    //     })
+    // };
 
     //Dodawanie odwiedzonego kraju do listy
     addCountryToList = (countryToAdd) => {
@@ -85,7 +85,6 @@ class BasicMap extends Component {
         if (this.state.info === true) {
             countryInfo = <div className={ styles.countryInfo }>
                 <div className={ styles.title }>{ this.state.country.name } </div>
-                <a href="#" className={ styles.close } onClick={this.closeCountryInfo}/>
                 <div className={ styles.info }>
                 <div>Native name: { this.state.country.nativeName } </div>
                 <div>Capital city: { this.state.country.capital } </div>
@@ -103,30 +102,34 @@ class BasicMap extends Component {
                     }
                 </div>
                 </div>
-                <div className={ styles.been } > <span>Have you been in this country?</span> <button className={ styles.btn } onClick={
+                <div className={ styles.been } > <p>Have you been in this country?</p> <button className={ styles.btn } onClick={
                     () => this.addCountryToList({ ...this.state.country })
                 } >Yes!</button> <button className={ styles.btn } onClick={
                     () => this.removeCountryFromList({ ...this.state.country })
                 } >No!</button> </div>
             </div>;
         } else if (this.state.info === false) {
-            countryInfo = "";
+            countryInfo = <div className={ styles.startInfo }></div>
         }
 
         //Render listy odwiedzonych krajów
         if (this.state.visited === true) {
             console.log(this.state.visitedCountries);
             countryList = <div className={ styles.countryList }>
-                <a href="#" className={styles.close} onClick={this.closeCountryList}/>
-                <h2 className={ styles.counter }> You have been in { count } countries: </h2>
+                <div className={ styles.counter }> You have been in { count } countries: </div>
                 <ul>
                     { Object.values(this.state.visitedCountries).map(country => (<li key={country.name}> { country.name } </li>)) }
                 </ul>
                 </div>;
+        } else {
+            countryList = <div className={ styles.countryList }>
+                <div className={ styles.startInfo }></div>
+            </div>;
         }
 
         return (
             <div className={styles.mainMap}>
+                <div> { countryInfo }</div>
                 <div className={styles.wrapperStyles}>
                 <ComposableMap
                     projectionConfig={{
@@ -157,9 +160,8 @@ class BasicMap extends Component {
                 </ComposableMap>
 
                 <ReactTooltip border={true}/>
-                <div> { countryInfo }</div>
-                <div> { countryList }</div>
-            </div>
+                </div>
+                <div>{ countryList }</div>
             </div>
         )
     }
@@ -168,3 +170,4 @@ class BasicMap extends Component {
 export default BasicMap
 
 //<img className='flag' src={this.state.country.flag} alt='flag'/>
+//<a href="#" className={ styles.close } onClick={this.closeCountryInfo}/>

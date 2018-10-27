@@ -1,24 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Life+Savers');
-@import url('https://fonts.googleapis.com/css?family=Archivo+Narrow');
 @import url('https://fonts.googleapis.com/css?family=Rajdhani');
-
-
 
 * {
   box-sizing: border-box;
 }
 
-//.main {
-//  border: 2px solid red;
-//  width: 1000px;
-//  height: 600px;
-//  display: inline-block;
-//  position: absolute;
-//}
-
 .wrapperStyles {
-  width: 1000px;
-  max-width: 980;
+  width: 60vw;
+  max-width: 1200px;
+  float: left;
 };
 
 .header {
@@ -41,7 +31,7 @@
   border-top: 1px solid black;
   line-height:100%;
   padding: 1em;
-  font-size: 1em;
+  font-size: 1.5em;
   width: 100vw;
   height: 100px;
   text-align: center;
@@ -54,87 +44,69 @@
   margin-bottom: 1em;
 }
 
-
-
-//style zaznaczonej mapki kraju
-.selectedMap {
-  fill: #ECEFF1;
-  stroke: #607D8B;
-  stroke-width: 0.75;
-  outline: none;
-}
-
-.selectedMap:hover {
-  fill: #607D8B;
-  stroke: #607D8B;
-  stroke-width: 0.75;
-  outline: none;
-}
-
-.selectedMap:active {
-  fill: #FF5722;
-  stroke: #607D8B;
-  stroke-width: 0.75;
-  outline: none;
-
-}
-
-.visitedCountry {
-  fill: #3f30ff;
-  stroke: #1a138b;
-  stroke-width: 0.75;
-  outline: none;
-
+.flexCountryInfo {
+  display:flex;
+  justify-content: center;
+  //align-items:center;
 }
 
 .countryInfo {
   font-family: 'Rajdhani', sans-serif;
-  position:relative;
   display: inline-block;
-  //border: 2px solid red;
-  width: 600px;
-  height: 200px;
+  width: 20vw;
   background-color:rgba(white, .8);
-  float: left;
   text-align: left;
 }
 
+.startInfo {
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  font-family: 'Life Savers', cursive;
+  font-size: 2em;
+  width: 20vw;
+  text-align: center;
+
+}
+
 .title {
-  font-size: 20px;
+  font-size: 2em;
   padding: 10px;
 }
 
 .info {
   padding-left: 10px;
-}
-
-.countryList {
-  display: inline-block;
-  border: 2px solid red;
-  width: 600px;
-  height: 200px;
-  background-color: darkgrey;
+  font-size: 1.1em;
 }
 
 .been {
-  font-size: 15px;
+  font-size: 1.2em;
   font-weight: bold;
   padding-left: 10px;
 }
 
-.been span {
-  padding-right: 10px;
+
+.countryList {
+  font-family: 'Rajdhani', sans-serif;
+  width: 20vw;
+  background-color:rgba(white, .8);
+  text-align: left;
+}
+
+.countryList ul li {
+  list-style-type: none;
 }
 
 .counter {
-  font-size: 20px;
+  font-size: 1.5em;
   padding: 10px;
+  font-family: 'Life Savers', cursive;
 }
 
 
-/*krzyżyk zamykania*/
+//krzyżyk zamykania
 .close {
-  margin: 15px;
+  margin-right: 1em;
   size: 25px;
   height: 25px;
   width: 25px;
@@ -172,15 +144,12 @@
   }
 }
 
-.title {
-}
-
-
+//przyciski
 .btn {
   color: black;
   height: 2em;
-  width: 20%;
-  //padding: 1.5em auto;
+  width: 30%;
+  padding: 1.5em auto;
   margin: 1em auto;
   background-color: white;
   border: 1px solid black;
@@ -192,8 +161,38 @@
 
 .btn:hover {
   letter-spacing: 0.8em;
-  background-color: black;
+  background-color: #ffc156;
   color: white;
 }
 
+//style zaznaczonej mapki kraju
+.selectedMap {
+  fill: #ECEFF1;
+  stroke: #43464a;
+  stroke-width: 0.75;
+  outline: none;
+}
+
+.selectedMap:hover {
+  fill: #43464a;
+  stroke: #43464a;
+  stroke-width: 0.75;
+  outline: none;
+}
+
+.selectedMap:active {
+  fill: #a9b2bc;
+  stroke: #a9b2bc;
+  stroke-width: 0.75;
+  outline: none;
+
+}
+
+.visitedCountry {
+  fill: #ffc156;
+  stroke: #6F7575;
+  stroke-width: 0.75;
+  outline: none;
+
+}
 
