@@ -1,10 +1,10 @@
 Where have you been?
 ===========================
-This is simple website which allows you to mark in what countries have you been. 
-Also by clicking on map you can see basic information about choosen country. 
+This is a simple website which allows you to mark countries you have been to. By clicking on the map you can also see some basic information about the chosen country. 
 
-Make a list of visited country and have fun seeing how world map becoming colorfull:
-https://izu1992.github.io/where-have-you-been/
+Make a list of visited countries and have fun watching the world map becoming colorful:
+
+> https://izu1992.github.io/where-have-you-been/
 
 The website is written using:
 ----------------------------
