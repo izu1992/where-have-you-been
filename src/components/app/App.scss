@@ -85,7 +85,6 @@
   padding-left: 10px;
 }
 
-
 .countryList {
   font-family: 'Rajdhani', sans-serif;
   width: 20vw;
@@ -104,45 +103,45 @@
 }
 
 
-//krzyżyk zamykania
-.close {
-  margin-right: 1em;
-  size: 25px;
-  height: 25px;
-  width: 25px;
-  position: relative;
-  box-sizing: border-box;
-  line-height: 25px;
-  display: inline-block;
-  float: right;
-
-  &:before, &:after {
-    width: 25px;
-    height: 5px;
-    transform: rotate(-45deg);
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: 25px/2;
-    margin-left: 5px/2;
-    margin-bottom: 25px/2;
-    display: block;
-    background-color: #000;
-    transition: all 0.2s ease-out;
-  }
-
-  &:after {
-    transform: rotate(45deg);
-  }
-
-  &:hover {
-
-    &:before, &:after {
-      transform: rotate(0deg);
-    }
-  }
-}
+////krzyżyk zamykania
+//.close {
+//  margin-right: 1em;
+//  size: 25px;
+//  height: 25px;
+//  width: 25px;
+//  position: relative;
+//  box-sizing: border-box;
+//  line-height: 25px;
+//  display: inline-block;
+//  float: right;
+//
+//  &:before, &:after {
+//    width: 25px;
+//    height: 5px;
+//    transform: rotate(-45deg);
+//    content: '';
+//    position: absolute;
+//    top: 50%;
+//    left: 50%;
+//    margin-top: 25px/2;
+//    margin-left: 5px/2;
+//    margin-bottom: 25px/2;
+//    display: block;
+//    background-color: #000;
+//    transition: all 0.2s ease-out;
+//  }
+//
+//  &:after {
+//    transform: rotate(45deg);
+//  }
+//
+//  &:hover {
+//
+//    &:before, &:after {
+//      transform: rotate(0deg);
+//    }
+//  }
+//}
 
 //przyciski
 .btn {
