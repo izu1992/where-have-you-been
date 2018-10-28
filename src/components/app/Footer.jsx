@@ -6,7 +6,7 @@ class Footer extends React.Component{
         return(
             <footer>
                 <div className={ styles.footer }>
-                    Have a great another adventure!
+                    Have another great adventure!
                 </div>
             </footer>
         )

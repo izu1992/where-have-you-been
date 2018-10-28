@@ -88,7 +88,7 @@ class BasicMap extends Component {
                     }
                 </div>
                 </div>
-                <div className={ styles.been } > <p>Have you been in this country?</p> <button className={ styles.btn } onClick={
+                <div className={ styles.been } > <p>Have you been to this country?</p> <button className={ styles.btn } onClick={
                     () => this.addCountryToList({ ...this.state.country })
                 } >Yes!</button> <button className={ styles.btn } onClick={
                     () => this.removeCountryFromList({ ...this.state.country })
@@ -101,7 +101,7 @@ class BasicMap extends Component {
         //Render listy odwiedzonych krajów
         if (this.state.visited === true) {
             countryList = <div className={ styles.countryList }>
-                <div className={ styles.counter }> You have been in { count } countries: </div>
+                <div className={ styles.counter }> You have been to { count } countries: </div>
                 <ul>
                     { Object.values(this.state.visitedCountries).map(country => (<li key={country.name}> { country.name } </li>)) }
                 </ul>
