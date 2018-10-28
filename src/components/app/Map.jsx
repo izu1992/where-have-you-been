@@ -32,20 +32,6 @@ class BasicMap extends Component {
         })
     };
 
-    // //Zamykanie info
-    // closeCountryInfo = () => {
-    //     this.setState({
-    //         info: false
-    //     })
-    // };
-    //
-    // //Zamykanie listy z odwiedzonymi krajami
-    // closeCountryList = () => {
-    //     this.setState({
-    //         visited: false
-    //     })
-    // };
-
     //Dodawanie odwiedzonego kraju do listy
     addCountryToList = (countryToAdd) => {
 
@@ -169,7 +155,3 @@ class BasicMap extends Component {
 }
 
 export default BasicMap
-
-//<img className='flag' src={this.state.country.flag} alt='flag'/>
-//<a href="#" className={ styles.close } onClick={this.closeCountryInfo}/>
-//            <a href="#" className={ styles.close } onClick={this.closeCountryInfo}/>
