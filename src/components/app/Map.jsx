@@ -171,3 +171,4 @@ export default BasicMap
 
 //<img className='flag' src={this.state.country.flag} alt='flag'/>
 //<a href="#" className={ styles.close } onClick={this.closeCountryInfo}/>
+//            <a href="#" className={ styles.close } onClick={this.closeCountryInfo}/>
