@@ -69,7 +69,7 @@ class BasicMap extends Component {
         //Jeżeli kliknięto na kraj to renderuję info na jego temat
         if (this.state.info === true) {
             countryInfo = <div className={ styles.countryInfo }>
-                <img className={ styles.flag } src={this.state.country.flag} alt='flag of country'/>
+                <img className={ styles.flag } src={this.state.country.flag} alt='flag of clicked country'/>
                 <div className={ styles.title }>{ this.state.country.name } </div>
                 <div className={ styles.info }>
                 <div>Native name: { this.state.country.nativeName } </div>
