@@ -22,7 +22,6 @@ class BasicMap extends Component {
             .then( response => {
             return response.json()
         }).then(data => {
-            console.log(data);
             this.setState({
                 country: data,
                 info: true
@@ -101,7 +100,6 @@ class BasicMap extends Component {
 
         //Render listy odwiedzonych krajów
         if (this.state.visited === true) {
-            console.log(this.state.visitedCountries);
             countryList = <div className={ styles.countryList }>
                 <div className={ styles.counter }> You have been in { count } countries: </div>
                 <ul>
