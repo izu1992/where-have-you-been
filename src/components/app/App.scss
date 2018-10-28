@@ -21,21 +21,13 @@
   padding: 1em;
   font-size: 2em;
   width: 100vw;
-  height: 100px;
+  height: 130px;
   text-align: center;
 }
 
-.footer {
+.header p {
+  font-size: 0.8em;
   font-family: 'Special Elite', cursive;
-  background-color: white;
-  color: black;
-  border-top: 1px solid black;
-  line-height:100%;
-  padding: 1em;
-  font-size: 1.5em;
-  width: 100vw;
-  height: 100px;
-  text-align: center;
 }
 
 .mainMap {
@@ -43,12 +35,6 @@
   justify-content: center;
   align-items:center;
   margin-bottom: 1em;
-}
-
-.flexCountryInfo {
-  display:flex;
-  justify-content: center;
-  //align-items:center;
 }
 
 .countryInfo {
@@ -67,7 +53,6 @@
   font-size: 2em;
   width: 20vw;
   text-align: center;
-
 }
 
 .flag {
@@ -75,6 +60,7 @@
   display: inline-block;
   height: 2em;
 }
+
 .title {
   font-size: 2em;
   padding-left: 10px;
@@ -108,7 +94,7 @@
   font-family: 'Life Savers', cursive;
 }
 
-//przyciski
+//buttons
 .btn {
   color: black;
   height: 2em;
@@ -129,7 +115,7 @@
   color: white;
 }
 
-//style zaznaczonej mapki kraju
+//selected map
 .selectedMap {
   fill: #ECEFF1;
   stroke: #43464a;
@@ -149,7 +135,6 @@
   stroke: #a9b2bc;
   stroke-width: 0.75;
   outline: none;
-
 }
 
 .visitedCountry {
@@ -157,6 +142,18 @@
   stroke: #6F7575;
   stroke-width: 0.75;
   outline: none;
+}
 
+.footer {
+  font-family: 'Special Elite', cursive;
+  background-color: white;
+  color: black;
+  border-top: 1px solid black;
+  line-height:100%;
+  padding: 1em;
+  font-size: 1.5em;
+  width: 100vw;
+  height: 100px;
+  text-align: center;
 }
 

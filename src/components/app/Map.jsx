@@ -96,7 +96,7 @@ class BasicMap extends Component {
                 } >No!</button> </div>
             </div>;
         } else if (this.state.info === false) {
-            countryInfo = <div className={ styles.startInfo }></div>
+            countryInfo = <div className={ styles.startInfo }> </div>
         }
 
         //Render listy odwiedzonych krajów
@@ -110,7 +110,7 @@ class BasicMap extends Component {
                 </div>;
         } else {
             countryList = <div className={ styles.countryList }>
-                <div className={ styles.startInfo }></div>
+                <div className={ styles.startInfo }> </div>
             </div>;
         }
 

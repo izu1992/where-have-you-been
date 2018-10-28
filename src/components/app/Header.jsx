@@ -7,6 +7,7 @@ class Header extends React.Component{
             <header>
                 <div className={ styles.header }>
                     Hey traveler! Where have you been so far?
+                    <p>Click on country!</p>
                 </div>
             </header>
         )
