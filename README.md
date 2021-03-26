@@ -6,6 +6,8 @@ Make a list of visited countries and have fun watching the world map becoming co
 
 > https://izu1992.github.io/where-have-you-been/
 
+Use Chrome browser.
+
 The website is written using:
 ----------------------------
 - React
